@@ -27,7 +27,7 @@ const CautaCetatean = () => {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.post("http://localhost:3001/api/cetateni/search", {
+      const res = await axios.post("https://intelpol-backend.onrender.com/api/cetateni/search", {
         searchType,
         searchValue
       }, {
