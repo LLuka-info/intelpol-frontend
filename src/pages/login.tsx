@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import axiosClient from "../utils/axiosClient";
-import { redirectDacaLogat } from "../hooks/useAuthRedirect";
+import { RedirectDacaLogat } from "../hooks/useAuthRedirect";
 import styles from "./styles/login.module.css";
 
 const Login = () => {
   const router = useRouter();
-  redirectDacaLogat();
+  RedirectDacaLogat();
 
   const [fullName, setfullName] = useState("");
   const [password, setPassword] = useState("");
