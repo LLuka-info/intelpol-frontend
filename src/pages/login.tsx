@@ -22,7 +22,7 @@ const Login = () => {
 
     setLoading(true);
     try {
-      const res = await axiosClient.post("/auth/login", { fullName, password });
+      const res = await axiosClient.post("https://intelpol-backend.onrender.com/auth/login", { fullName, password });
       localStorage.setItem("auth-token", res.data.token);
       router.replace("/");
     } catch (err: any) {
