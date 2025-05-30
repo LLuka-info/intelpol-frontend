@@ -10,7 +10,7 @@ const OfiteriActivi = () => {
   useEffect(() => {
     const fetchOfficers = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/api/ofiteri/activi", {
+        const res = await axios.get("https://intelpol-backend.onrender.com/api/ofiteri/activi", {
           headers: { Authorization: `Bearer ${localStorage.getItem("auth-token")}` }
         });
         setOfficers(res.data);
