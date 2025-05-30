@@ -44,9 +44,9 @@
 }
 
 .rankCircle {
-  width: 26px;
+  width: 66px;
   height: 26px;
-  border-radius: 50%;
+  border-radius:5%;
   display: flex;
   align-items: center;
   justify-content: center;
