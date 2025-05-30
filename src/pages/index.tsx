@@ -287,7 +287,7 @@ function Home() {
                   
                 if (token) {
                   await axios.post(
-                    "http://localhost:3001/api/auth/logout",
+                    "https://intelpol-backend.onrender.com/api/auth/logout",
                     {},
                     { headers: { Authorization: `Bearer ${token}` } }
                   );
