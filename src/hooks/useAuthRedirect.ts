@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-function redirectDacaLogat() {
+function RedirectDacaLogat() {
   const router = useRouter();
 
   useEffect(() => {
@@ -29,6 +29,6 @@ function useRedirectDacaNelogat() {
 }
 
 export {
-  redirectDacaLogat, 
+  RedirectDacaLogat, 
   useRedirectDacaNelogat 
 };
