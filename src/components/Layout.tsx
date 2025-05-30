@@ -8,7 +8,7 @@ type Props = {
 const Layout = ({ children }: Props) => {
   return (
     <div>
-      {/* Aici poți adăuga header, navbar, footer etc. */}
+      
       {children}
     </div>
   );
