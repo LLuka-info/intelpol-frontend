@@ -83,19 +83,16 @@
 }
 
 .profileCircle {
-  width: 26px;
+  width: 66px;
   height: 26px;
-  border-radius: 50%;
+  border-radius:5%;
   display: flex;
-  margin-right: 15px;
   align-items: center;
   justify-content: center;
   background: #ffffff;
   box-shadow: 0 0 0 2px #0c144a;
   flex-shrink: 0;
-  color: #0c144a;
-  font-weight: bold;
-  font-size: 0.9rem;
+  margin-right: 5%;
 }
 
 .mainContent {
