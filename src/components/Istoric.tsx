@@ -36,7 +36,6 @@ const Istoric: React.FC<IstoricProps> = ({ history }) => {
           const copName = entry.officer?.fullName ?? "Agent necunoscut";
 
           if (!entry.addedConvictii || entry.addedConvictii.length === 0) {
-            // If no convictions added, just show a generic entry (optional)
             return (
               <li key={index} className={styles.item}>
                 <div>
@@ -45,8 +44,6 @@ const Istoric: React.FC<IstoricProps> = ({ history }) => {
               </li>
             );
           }
-
-          // Otherwise list all added convictions on separate lines:
           return entry.addedConvictii.map((conv, i) => (
             <li key={`${index}-${i}`} className={styles.item}>
               <div>
