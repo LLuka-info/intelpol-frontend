@@ -51,7 +51,7 @@ const PanouDev = () => {
   const fetchOfficers = async () => {
     try {
       const { data } = await axios.get<Officer[]>(
-        "http://localhost:3001/api/ofiteri",
+        "https://intelpol-backend.onrender.com/api/ofiteri",
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("auth-token")}` },
         }
@@ -65,7 +65,7 @@ const PanouDev = () => {
   const handleCreateOfficer = async () => {
     try {
       await axios.post(
-        "http://localhost:3001/api/ofiteri",
+        "https://intelpol-backend.onrender.com/api/ofiteri",
         newOfficer,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("auth-token")}` },
@@ -87,7 +87,7 @@ const PanouDev = () => {
   const handleCreateCitizen = async () => {
     try {
       await axios.post(
-        `http://localhost:3001/api/cetateni`,
+        `https://intelpol-backend.onrender.com/api/cetateni`,
         newCitizen,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("auth-token")}` },
@@ -120,7 +120,7 @@ const PanouDev = () => {
       }
 
       await axios.put(
-        `http://localhost:3001/api/ofiteri/${selectedOfficer._id}`,
+        `https://intelpol-backend.onrender.com/api/ofiteri/${selectedOfficer._id}`,
         updateData,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("auth-token")}` },
@@ -142,7 +142,6 @@ const PanouDev = () => {
     <div className="p-4 bg-white rounded-lg shadow mt-4 max-w-xl mx-auto">
       <h2 className="text-xl font-bold mb-4">Panou Admin</h2>
 
-      {/* Mode switch */}
       <div className="mb-6 space-x-2">
         <button
           onClick={() => setMode("officer")}
@@ -164,7 +163,6 @@ const PanouDev = () => {
         </button>
       </div>
 
-      {/* Create Officer */}
       {mode === "officer" && (
         <div>
           <h3 className="font-semibold mb-4">Creare Ofițer Nou</h3>
@@ -249,12 +247,10 @@ const PanouDev = () => {
         </div>
       )}
 
-      {/* Edit Officer */}
       {mode === "editOfficer" && (
         <div>
           <h3 className="font-semibold mb-4">Editare Ofițer</h3>
 
-          {/* Search input */}
           <input
             type="text"
             placeholder="Caută ofițer după nume..."
@@ -263,7 +259,6 @@ const PanouDev = () => {
             className="p-2 border rounded w-full mb-4"
           />
 
-          {/* Autocomplete list */}
           <div className="max-h-48 overflow-auto border rounded mb-4">
             {filteredOfficers.length === 0 && (
               <p className="p-2 text-gray-500">Nu s-au găsit ofițeri.</p>
@@ -282,7 +277,6 @@ const PanouDev = () => {
             ))}
           </div>
 
-          {/* Edit form */}
           {selectedOfficer && (
             <div className="grid grid-cols-2 gap-4">
               <input
