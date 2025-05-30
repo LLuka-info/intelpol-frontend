@@ -33,7 +33,7 @@ const ProfilCetatean = () => {
           headers: { Authorization: `Bearer ${localStorage.getItem("auth-token")}` }
         };
 
-        const res = await axios.get(`http://localhost:3001/api/cetateni/${cnp}`, authHeader);
+        const res = await axios.get(`https://intelpol-backend.onrender.com/api/cetateni/${cnp}`, authHeader);
         const citizenData = res.data;
 
         setCitizen(citizenData);
@@ -44,7 +44,7 @@ const ProfilCetatean = () => {
         });
 
         const IstoricRes = await axios.get(
-          `http://localhost:3001/api/cetateni/Istoric/${citizenData._id}`,
+          `https://intelpol-backend.onrender.com/api/cetateni/Istoric/${citizenData._id}`,
           authHeader
         );
         setIstoric(IstoricRes.data);
@@ -80,7 +80,7 @@ const ProfilCetatean = () => {
       const updatedConvictii = [...(citizen.convictii || []), ...newEntries];
 
       await axios.put(
-        `http://localhost:3001/api/cetateni/${citizen._id}`,
+        `https://intelpol-backend.onrender.com/api/cetateni/${citizen._id}`,
         {
           observatii: formData.observatii,
           convictii: updatedConvictii
