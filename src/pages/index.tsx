@@ -52,7 +52,7 @@ function Home() {
           return;
         }
 
-        const res = await axios.get("http://localhost:3001/api/ofiteri/profile", {
+        const res = await axios.get("https://intelpol-backend.onrender.com/api/ofiteri/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setDateOfiter(res.data);
@@ -80,7 +80,7 @@ function Home() {
         : null;
 
       const res = await axios.post(
-        "http://localhost:3001/api/cetateni/search",
+        "https://intelpol-backend.onrender.com/api/cetateni/search",
         { searchType, searchValue: val },
         { headers: { Authorization: `Bearer ${token}` } }
       );
