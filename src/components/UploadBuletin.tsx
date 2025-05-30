@@ -22,7 +22,7 @@ const UploadBuletin = ({ file, onDone }: UploadBuletinProps) => {
 
       try {
         const res = await axios.post(
-          "http://localhost:3001/api/cetateni/upload",
+          "https://intelpol-backend.onrender.com/api/cetateni/upload",
           formData,
           {
             headers: {
