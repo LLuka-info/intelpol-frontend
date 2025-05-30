@@ -2,10 +2,10 @@ import React from "react";
 import styles from "../pages/styles/Istoric.module.css";
 
 interface Convictie {
-  tip: string;          // "Amendă" or "Avertisment"
-  descriere: string;    // motivele
-  data?: string;        // optional if needed
-  ora?: string;         // optional if needed
+  tip: string;        
+  descriere: string;   
+  data?: string;        
+  ora?: string;        
 }
 
 interface AuditEntry {
